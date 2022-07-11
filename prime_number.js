@@ -15,13 +15,11 @@ console.log(isPrimeNumber(5));
 console.log(isPrimeNumber(7));
 console.log(isPrimeNumber(8));
 
-// Retourner la liste des nombres premiers supérieurs ou égal à n
+// Retourner le plus petit des nombres premiers supérieurs ou égal à n
 const findSupPrime = (n) => {
-  let result = [];
-  for (let i = n; i > 0; i--) {
-    if (isPrimeNumber(i)) {
-      result.push(i);
-    }
+  let result = n;
+  while (!isPrimeNumber(result)) {
+    result++;
   }
   return result;
 }
